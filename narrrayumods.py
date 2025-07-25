@@ -15,3 +15,6 @@ def user(name):
 def swdadjoke():
     return render_template('swjokes.html')
 
+@app.route('/farm')
+def farm():
+    return render_template('farm.html')
