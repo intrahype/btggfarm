@@ -13,5 +13,5 @@ def user(name):
 
 @app.route('/swdadjoke')
 def swdadjoke():
-    return '<h1>Why did Princess Leia change her hair on Hoth?</h1> <b> insert pause </b> <h1> She was freezing her Buns off!</h1>'
+    return render_template('swjokes.html')
 
