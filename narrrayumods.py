@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 from flask import Flask
 import os.path
 from flask_sqlalchemy import SQLAlchemy
-=======
-
-from flask import Flask, render_template
->>>>>>> 45aeec39730167c4fcf9a0e48db70bc00a540b3f
 
 # database SQLite
 db = SQLAlchemy()
