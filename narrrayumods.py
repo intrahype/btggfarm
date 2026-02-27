@@ -41,7 +41,6 @@ def user(name):
 def swdadjoke():
     return render_template('swjokes.html')
 
-<<<<<<< HEAD
 @app.route('/modlist')
 def modlist():
     try:
@@ -61,8 +60,3 @@ def modlist():
 
 if __name__ == "__main__":
     app.run(debug=True)
-=======
-@app.route('/farm')
-def farm():
-    return render_template('farm.html')
->>>>>>> 45aeec39730167c4fcf9a0e48db70bc00a540b3f
