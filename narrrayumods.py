@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 from flask import Flask
 import os.path
 from flask_sqlalchemy import SQLAlchemy
+=======
+
+from flask import Flask, render_template
+>>>>>>> 45aeec39730167c4fcf9a0e48db70bc00a540b3f
 
 # database SQLite
 db = SQLAlchemy()
@@ -31,16 +36,17 @@ class Mods(db.Model):
 
 @app.route('/')
 def index():
-    return '<h1>Hello World! This site will serve to track the specific mods for a coop farm at https://www.twitch.tv/narrrayu on Saturdays at 00:30 GMT 19:30 EST 16:30 PST || </h1>'
+    return render_template('index.html')
 
 @app.route('/user/<name>')
 def user(name):
-    return '<h1>Hello, {}!</h1>'.format(name)
+    return render_template('name.html', name=name)
 
 @app.route('/swdadjoke')
 def swdadjoke():
-    return '<h1>Why did Princess Leia change her hair on Hoth?</h1> <b> insert pause </b> <h1> She was freezing her Buns off!</h1>'
+    return render_template('swjokes.html')
 
+<<<<<<< HEAD
 @app.route('/modlist')
 def modlist():
     try:
@@ -60,3 +66,8 @@ def modlist():
 
 if __name__ == "__main__":
     app.run(debug=True)
+=======
+@app.route('/farm')
+def farm():
+    return render_template('farm.html')
+>>>>>>> 45aeec39730167c4fcf9a0e48db70bc00a540b3f
